@@ -227,6 +227,6 @@ body {
 
 /* Effetto hover sui link: cambia colore al passaggio del mouse */
 .navbar-center a:hover {
-  color: #87cefa; /* Cambia il colore del testo in un azzurro chiaro (LightSkyBlue) per evidenziare l’interazione */
+  color: #87cefa; /* Cambia il colore del testo in un azzurro chiaro per evidenziare l’interazione */
 }
 
