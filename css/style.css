@@ -1,0 +1,232 @@
+/* Impostazioni generali per il body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font moderno e leggibile */
+  background: url('../assets/images/barillasfondo.webp') no-repeat center center fixed; /* Sfondo immagine centrato e fisso */
+  background-size: cover; /* L'immagine copre tutto lo schermo */
+  margin: 0; /* Rimuove i margini predefiniti */
+  padding: 0; /* Rimuove il padding predefinito */
+  display: flex; /* Layout flessibile */
+  flex-direction: column; /* Imposta la direzione verticale per i figli */
+  align-items: center; /* Centra orizzontalmente */
+  justify-content: center; /* Centra verticalmente */
+  min-height: 100vh; /* Altezza minima pari a tutta l'altezza della finestra */
+}
+
+/* Sezione hero con titolo */
+.hero {
+  display: flex; /* Layout flessibile */
+  flex-direction: column; /* Disposizione verticale */
+  justify-content: center; /* Allinea verticalmente */
+  align-items: center; /* Allinea orizzontalmente */
+  background: transparent; /* Sfondo trasparente */
+  color: white; /* Testo bianco */
+  text-align: center; /* Testo centrato */
+  animation: fadeInHero 1.2s ease-in-out; /* Animazione di comparsa */
+  margin-bottom: 2rem; /* Spazio sotto */
+  margin-top: 50px; /* Spazio sopra per evitare sovrapposizione con navbar */
+}
+
+/* Stile per il logo nella hero */
+.hero img {
+  width: 180px; /* Larghezza del logo */
+  margin-bottom: 1rem; /* Spazio sotto il logo */
+  animation: fadeInLogo 1.2s ease-in-out; /* Animazione del logo */
+}
+
+/* Animazione per il logo */
+@keyframes fadeInLogo {
+  from { opacity: 0; transform: translateY(-20px); } /* Parte da invisibile e più in alto */
+  to { opacity: 1; transform: translateY(0); } /* Arriva in posizione normale visibile */
+}
+
+/* Stile per il titolo principale */
+.hero h1 {
+  font-size: 3.5rem; /* Dimensione grande */
+  font-weight: bold; /* Grassetto */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Ombra per leggibilità */
+}
+
+/* Animazione per la sezione hero */
+@keyframes fadeInHero {
+  from { opacity: 0; transform: scale(0.95); } /* Parte rimpicciolito e invisibile */
+  to { opacity: 1; transform: scale(1); } /* Arriva alla dimensione normale visibile */
+}
+
+/* Animazione per le card */
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(20px); } /* Parte più in basso e invisibile */
+  to { opacity: 1; transform: translateY(0); } /* Sale e appare */
+}
+
+/* Contenitore principale delle card */
+.container {
+  max-width: 1280px; /* Larghezza massima */
+  width: 100%; /* Occupa tutta la larghezza disponibile */
+  padding: 2rem; /* Spazio interno */
+  display: flex; /* Layout flessibile */
+  flex-direction: row; /* Disposizione orizzontale */
+  justify-content: center; /* Centra orizzontalmente */
+  align-items: flex-start; /* Allinea in alto */
+  gap: 2rem; /* Spazio tra le card */
+  flex-wrap: wrap; /* Va a capo se lo spazio non basta */
+}
+
+/* Stile per ogni card */
+.card {
+  background-color: rgba(255, 255, 255, 0.3); /* Sfondo semi-trasparente */
+  padding: 1.5rem; /* Spazio interno */
+  border-radius: 12px; /* Angoli arrotondati */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Ombra leggera */
+  animation: fadeInCard 1.5s ease-in-out forwards; /* Applica animazione */
+  backdrop-filter: blur(3px); /* Sfocatura dietro */
+  -webkit-backdrop-filter: blur(3px); /* Sfocatura per Safari */
+  width: 40%; /* Larghezza card */
+  display: flex; /* Layout flessibile */
+  flex-direction: column; /* Disposizione verticale */
+  align-items: center; /* Centra orizzontalmente */
+  opacity: 0; /* Inizia invisibile */
+}
+
+/* Titoli delle card */
+.card h2, .section-title {
+  text-align: center; /* Centrati */
+}
+
+.section-title {
+  font-size: 1.6rem; /* Grandezza titolo */
+  color: white;
+  font-weight: bold; /* Grassetto */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Ombra per leggibilità */
+}
+
+/* Layout griglia per le bolle nella card */
+.cards-section {
+  display: grid; /* Usa la griglia */
+  grid-template-columns: 1fr 1fr; /* Due colonne */
+  gap: 0.6rem; /* Spazio tra le bolle */
+  justify-items: center; /* Centra ogni bolla */
+  margin-bottom: 1rem; /* Spazio sotto */
+
+}
+
+/* Stile per ogni bolla */
+.report-card {
+  background-color: rgba(255, 255, 255, 0.2); /* Sfondo trasparente */
+  padding: 1rem; /* Spazio interno */
+  border-radius: 50%; /* Forma circolare */
+  backdrop-filter: blur(5px); /* Sfocatura dietro */
+  -webkit-backdrop-filter: blur(3px); /* Sfocatura per Safari */
+  width: 120px;
+  height: 120px;
+  display: flex; /* Layout flessibile */
+  flex-direction: column; /* Verticale */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra orizzontalmente */
+  text-align: center; /* Testo centrato */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Ombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effetti transizione */
+}
+
+/* Effetto al passaggio del mouse */
+.report-card:hover {
+  transform: translateY(-5px); /* Si alza leggermente */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Aumenta ombra */
+}
+
+/* Emoji nella bolla */
+.report-card .icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Numero grande nella bolla */
+.report-card .number {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+/* Descrizione nella bolla */
+.report-card .desc {
+  font-size: 0.8rem;
+  color: #222;
+  line-height: 1.2;
+  padding: 0 0.4rem;
+}
+
+/* Stile per il pulsante di download */
+.btn-download {
+  display: inline-flex; /* Layout flessibile */
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* Spazio tra icona e testo */
+  padding: 6px 12px; /* Spazio interno */
+  background-color: #00509d; /* Colore blu Barilla */
+  color: white;
+  text-decoration: none; /* Rimuove sottolineatura */
+  border-radius: 30px; /* Angoli arrotondati */
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: background 0.3s ease, transform 0.3s ease; /* Transizioni fluide */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* Ombra */
+  margin-top: 1rem;
+}
+
+/* Icona di download prima del testo */
+.btn-download::before {
+  content: "\1F4E5"; /* Emoji download */
+  font-size: 1rem;
+}
+
+/* Hover pulsante download */
+.btn-download:hover {
+  background-color: #003f7f; /* Blu più scuro */
+  transform: scale(1.05); /* Leggero ingrandimento */
+}
+
+
+
+/* NAVBAR SUPERIORE */
+.navbar {
+  overflow-x: auto; /* Consente lo scorrimento orizzontale se il contenuto eccede la larghezza, evitando il taglio del testo */
+  box-sizing: border-box; /* Include padding e bordi nel calcolo della larghezza e altezza dell’elemento */
+  width: 100%; /* La navbar occupa l’intera larghezza della finestra */
+  background-color: #003366; /* Colore di sfondo blu scuro, coerente con l’identità visiva di Barilla */
+  color: white; /* Colore del testo impostato su bianco per garantire il contrasto */
+  display: flex; /* Imposta un layout flessibile per permettere l’allineamento degli elementi interni */
+  justify-content: space-between; /* Distribuisce lo spazio tra il logo a sinistra e i link a destra */
+  align-items: center; /* Centra verticalmente tutti gli elementi contenuti nella navbar */
+  padding: 0.6rem 2rem; /* Applica uno spazio interno di 0.6rem in alto e in basso, 2rem a destra e sinistra */
+  font-family: 'Segoe UI', sans-serif; /* Font moderno e leggibile, coerente con lo stile del sito */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Aggiunge un’ombra sottile per staccare visivamente la navbar dal contenuto sottostante */
+  position: fixed; /* La navbar resta fissa in alto anche durante lo scroll */
+  top: 0; /* La posizione top è fissata a 0 per ancorarla alla parte superiore della finestra */
+  left: 0; /* La posizione left è fissata a 0 per ancorarla al bordo sinistro della finestra */
+  z-index: 1000; /* La z-index elevata garantisce che la navbar si trovi sopra tutti gli altri elementi */
+}
+
+/* Logo nella navbar */
+.navbar-left img {
+  height: 38px; /* Imposta un’altezza fissa al logo per mantenere la proporzione visiva */
+}
+
+/* Contenitore dei link nella parte destra della navbar */
+.navbar-center {
+  display: flex; /* Usa Flexbox per disporre i link in linea orizzontale */
+  gap: 2rem; /* Distanza fissa di 2rem tra un link e l’altro per migliorare la leggibilità */
+}
+
+/* Stile generale dei link presenti nella navbar */
+.navbar-center a {
+  color: white; /* Il testo dei link è bianco per un buon contrasto sullo sfondo scuro */
+  text-decoration: none; /* Rimuove la sottolineatura predefinita dei link */
+  font-size: 1rem; /* Dimensione del testo standard (circa 16px) */
+  font-weight: 400; /* Peso regolare del font per un aspetto pulito e professionale */
+  transition: color 0.3s ease; /* Applica una transizione fluida quando si passa con il mouse sopra un link */
+}
+
+/* Effetto hover sui link: cambia colore al passaggio del mouse */
+.navbar-center a:hover {
+  color: #87cefa; /* Cambia il colore del testo in un azzurro chiaro (LightSkyBlue) per evidenziare l’interazione */
+}
+
