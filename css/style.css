@@ -211,13 +211,13 @@ body {
 }
 
 /* Contenitore dei link nella parte destra della navbar */
-.navbar-center {
+.navbar-right {
   display: flex; /* Usa Flexbox per disporre i link in linea orizzontale */
   gap: 2rem; /* Distanza fissa di 2rem tra un link e l’altro per migliorare la leggibilità */
 }
 
 /* Stile generale dei link presenti nella navbar */
-.navbar-center a {
+.navbar-right a {
   color: white; /* Il testo dei link è bianco per un buon contrasto sullo sfondo scuro */
   text-decoration: none; /* Rimuove la sottolineatura predefinita dei link */
   font-size: 1rem; /* Dimensione del testo standard (circa 16px) */
@@ -226,7 +226,7 @@ body {
 }
 
 /* Effetto hover sui link: cambia colore al passaggio del mouse */
-.navbar-center a:hover {
-  color: #87cefa; /* Cambia il colore del testo in un azzurro chiaro per evidenziare l’interazione */
+.navbar-right a:hover {
+  color: #87cefa; /* Cambia il colore del testo in un azzurro chiaro (LightSkyBlue) per evidenziare l’interazione */
 }
 
